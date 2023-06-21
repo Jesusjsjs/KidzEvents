@@ -21,6 +21,13 @@
                     <li>Favoritos</li>
                 </ul>
             </nav>
+
+            <div class="userPass">
+                <ul>
+                    <li>Sign In</li>
+                    <li>Log In</li>
+                </ul>
+            </div>
         </div>
     </header>
     <!-- Hero -->
