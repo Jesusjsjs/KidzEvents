@@ -24,8 +24,8 @@
 
             <div class="userPass">
                 <ul>
-                    <li>Sign In</li>
-                    <li>Log In</li>
+                    <li class="signIn">Sign In</li>
+                    <li class="logIn">Log In</li>
                 </ul>
             </div>
         </div>
@@ -55,6 +55,10 @@
     <!-- Final del hero -->
 
 
+    <!-- Eventos info -->
+    <div class="infoProximosEventos">
+        <h2><b>Proximos eventos</b></h2>
+    </div>
 
     <div class="events">
     
@@ -157,6 +161,14 @@
 
     </div>
 
+    <!-- Barra buscador -->
+    <div class="buscadorBlue">
+        <div>
+            <h2>Buscar evento</h2>
+            <input placeholder="Buscar evento" />
+        </div>
+        
+    </div>
 
     <footer>
         <div class="footerChild">
