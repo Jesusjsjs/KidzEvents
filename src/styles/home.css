@@ -31,6 +31,10 @@ h5{
     font-size: 26px;
     line-height: 92.5%;
 }
+h6{
+    font-size: 22px;
+    font-weight: 300;
+}
 button{
     font-size: 20px;
     cursor: pointer;
@@ -179,8 +183,9 @@ header div nav ul li:hover{
     margin: auto;
     max-width: 1400px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
 }
 
 
@@ -189,6 +194,7 @@ header div nav ul li:hover{
 
 .cardEvento{
     background-color: #14162C;
+    width: 300px;
 }
 .cardEvento img{
     width: 100%;

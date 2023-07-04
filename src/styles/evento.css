@@ -1,0 +1,21 @@
+.sectionGaleria{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.galeria{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    width: 1400px;
+    height: 720px;
+    gap: 20px;
+}
+
+.imgGaleria{
+    height: 720px;
+    background-color: rgb(75, 82, 110);
+    width: 100%;
+
+}
