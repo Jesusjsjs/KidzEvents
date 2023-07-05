@@ -17,7 +17,7 @@
         <div>
             <nav>
                 <ul>
-                    <li>Inicio</li>
+                    <li >Inicio</li>
                     <li>Crear</li>
                     <li>Favoritos</li>
                 </ul>

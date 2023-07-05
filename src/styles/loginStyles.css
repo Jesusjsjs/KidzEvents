@@ -60,6 +60,7 @@ body{
 }
 .form button:hover,.form button:active,.form button:focus {
   color: #a8abce;
+  
 }
 .form .message {
   margin: 15px 0 0;
