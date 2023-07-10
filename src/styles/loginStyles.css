@@ -27,6 +27,9 @@ body{
   padding: 45px;
   text-align: center;
 }
+.errorLogin{
+  color: #fff;
+}
 
 .form input {
   font-family: "Kanit", sans-serif;
