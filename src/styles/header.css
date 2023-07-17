@@ -1,0 +1,66 @@
+/* Header */
+header{
+    width: 100%;
+    position: absolute;
+}
+header div{
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+}
+header div nav{
+    padding: 20px ;
+    width: 50%;
+}
+.userPass{
+    width: 50%;
+    justify-content: end;
+}
+.signIn{
+    text-align: center;
+    border:2px solid #131524;
+    letter-spacing: 0.1em;
+    color: #131524;
+    cursor: pointer;
+    padding: 8px 0px 8px 0px;
+}
+.signIn:hover{
+    background-color: rgba(46, 46, 46, 0.158);
+
+}
+.logIn{
+    text-align: center;
+    border:2px solid #131524;
+    background-color: #131524;
+    letter-spacing: 0.1em;
+    color: white;
+    cursor: pointer;
+    padding: 8px 0px 8px 0px;
+}
+.logIn:hover{
+    color: rgb(185, 185, 185);
+}
+.userPass ul{
+    display: grid;
+    grid-template-columns: repeat(2, 170px);
+    text-align: end;
+    list-style: none;
+    padding: 0px 20px 0pc 20px;
+    font-size: 20px;
+    gap: 20px;
+}
+header div nav ul{
+    display: grid;
+    grid-template-columns: repeat(3, 170px);
+    list-style: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+header div nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+header div nav ul li a:hover{
+    color: gray;
+}

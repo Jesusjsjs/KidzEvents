@@ -2,10 +2,12 @@
 
 include_once 'model/user.php';
 include_once 'model/user_session.php';
+include_once 'model/pedirEventos.php';
 
 
 $userSession = new UserSession();
 $user = new User();
+$eventos = new pedirEventos();
 
 
 if( isset($_SESSION['user']) ){
@@ -15,10 +17,10 @@ if( isset($_SESSION['user']) ){
     include_once 'landing.php';
 
 }
-else if( isset($_POST['email']) && isset($_POST['password']) ){
+else if( isset($_POST['correo']) && isset($_POST['password']) ){
     // echo "validacion de login";
 
-    $emailForm =  $_POST['email'];
+    $emailForm =  $_POST['correo'];
     $passwordForm = $_POST['password'];
 
     if( $user -> userExist($emailForm, $passwordForm) ){

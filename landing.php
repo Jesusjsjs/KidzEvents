@@ -17,7 +17,7 @@
             <nav>
                 <ul>
                     <li>Inicio</li>
-                    <li>Crear</li>
+                    <li><a href="dashboardUser.php">Crear</a></li>
                     <li>Favoritos</li>
                 </ul>
             </nav>
@@ -27,8 +27,7 @@
                     <!-- <li class="signIn">Sign In</li>
                     <li class="logIn">Log In</li> -->
                     <?php
-                       echo $user->getEmail();
-                        
+                        echo $user->getcorreo();
                     ?>
                     <a href="model/logout.php">Cerrar sesion </a>
                 </ul>
@@ -66,31 +65,26 @@
     </div>
 
     <div class="events">
-
-        <?php
-        // Obtener el JSON desde una fuente externa o un archivo local
-        $json = file_get_contents('http://localhost/desarrollo/kidzEvents/model/pedirUsers.php');
-
-        // Decodificar el JSON en un objeto o arreglo en PHP
-        $data = json_decode($json);
-        ?>
     
         <div class="eventsContainer">
 
-            <?php
-                // Acceder a los datos del JSON y mostrarlos
-                foreach ($data as $item) {
-                echo'<div class="cardEvento">';
-                    echo "<img src='./src/img/provDB/imgProvDB.jpg' class='imgCardEvento'/>";
-                    echo "<div class='cardEventoInfo'>";
-                    echo "<h5>". $item->nombre ."</h5>";
-                    echo "<h6>". $item->apellido ."</h6>";
-                    echo " <button>Ver evento</button>";
-                    echo"</div>";
-                echo"</div>";
-            }
+            <?php foreach($eventos->pedirEventosAprobados() as $r): ?>
+                <div class="cardEvento">
+                    <?php 
+                        $nombreMainImg = $r->imagenMain;
+                        $pathImagen = './src/imgEventos/' . $nombreMainImg;
+                    ?>
+                    <img src=<?php echo $pathImagen ?>>
+                    <div class="cardEventoInfo" >
+   
+                        <h3><?php echo $r->nombreEvento ?></h3>
+                        <h4><?php echo $r->descriptionEvento ?></h4>
+                        <h5><?php echo $r->horaEvento ?></h5>
+                        <button >Ver evento</button>
+                    </div>
+                </div>
 
-            ?>
+            <?php endforeach; ?>
 
         </div>
 
@@ -101,13 +95,13 @@
     </div>
 
     <!-- Barra buscador -->
-    <div class="buscadorBlue">
+    <!-- <div class="buscadorBlue">
         <div>
             <h2>Buscar evento</h2>
             <input placeholder="Buscar evento" />
         </div>
         
-    </div>
+    </div> -->
 
     <footer>
         <div class="footerChild">

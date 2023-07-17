@@ -1,0 +1,22 @@
+/* footer */
+footer{
+    margin-top: 336px;
+    width: 100%;
+    background-color: #14162C;
+    height: 430px;
+    display: flex;
+    justify-content:  center;
+}
+.footerChild{
+    width: 1400px;
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    margin: auto;
+    gap: 20px;
+    padding: 20px;
+}
+.footerChild h3{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 10px;
+}
