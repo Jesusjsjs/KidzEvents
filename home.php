@@ -80,7 +80,7 @@
                         <h3><?php echo $r->nombreEvento ?></h3>
                         <h4><?php echo $r->descriptionEvento ?></h4>
                         <h5><?php echo $r->horaEvento ?></h5>
-                        <button >Ver evento</button>
+                        <a href=<?php echo "evento.php?idEvento=". $r->idEvento ?> ><button > Ver evento </button></a>
                     </div>
                 </div>
 

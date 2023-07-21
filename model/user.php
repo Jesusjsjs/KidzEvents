@@ -133,4 +133,15 @@ class User extends Database{
         return $esAdmin;
     }
 
+    public function pedirEventoPorId( $idEvento ){
+        $result = array();
+        $stm = $this->StartUp()->prepare("SELECT * FROM eventos WHERE idEvento = :idEvento");
+        $stm->execute([
+            'idEvento' => $idEvento
+        ]);
+
+        return $stm->fetchAll(PDO::FETCH_OBJ);
+    
+    }
+
 }

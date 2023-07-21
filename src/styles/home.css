@@ -182,6 +182,7 @@ header div nav ul li a:hover{
 
 .events{
     width: 100%;
+    min-height: 100vh;
 }
 .eventsContainer{
     margin: auto;
@@ -290,3 +291,18 @@ footer{
     background-color: #131524;
     border: 1px solid #02A4F6;
 }
+
+#eventosHero{
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* right: 10%;
+    top: 10%; */
+}
+.eventosHeroChild{
+    display: grid;
+    grid-template-columns: 200px, 200px;
+} 

@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700&display=swap');
+
 /* Header */
 header{
     width: 100%;
     position: absolute;
+    font-family: Kanit;
 }
 header div{
     max-width: 1400px;

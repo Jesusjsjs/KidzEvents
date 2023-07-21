@@ -36,9 +36,14 @@
         </div>
     </header>
 
+
+    
+
     <div class="llenarEventos">
 
+        
         <form action="./guardarEvento.php" method="POST" enctype="multipart/form-data">
+            <h2><b>Datos generales del evento</b></h2>
             <label>Nombre del evento</label>
             <input name="nombreEvento" type="text" id="nombreEvento">
 
@@ -54,7 +59,7 @@
             <label>Dirección del evento</label>
             <input name="directionEvento" type="text">
 
-            <h2>Imagenes del evento</h2>
+            <h2><b>Imagenes del evento</b></h2>
 
             <label>Imagen 1</label>
             <input name="imagenMain" type="file" id="imagenMain">
@@ -68,7 +73,7 @@
             <label>Imagen 4</label>
             <input name="imagen4" type="file">
 
-            <input name="userId" value=<?php echo $userId ?>>
+            <input type="hidden" name="userId" value=<?php echo $userId ?>>
 
             <button type="submit">SUBIR EVENTO</button>
 
@@ -96,10 +101,10 @@
                     </h5>
                     <span>
                         <?php 
-                            if( $j->estatus ){
-                                echo "Evento aprobado";
+                            if( $r->estatus ){
+                                echo "Tu evento ya fue aprobado";
                             } else{
-                                echo "Evento no aprobado";
+                                echo "No han aprobado tu evento";
                             }
                         ?>
                     </span>

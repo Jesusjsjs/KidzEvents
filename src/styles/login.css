@@ -7,8 +7,6 @@ h2{
 }
 
 body{
-    height: 100vh;
-    overflow: hidden;
     font-family: "Kanit";
   background: #131524;
 }
@@ -21,11 +19,13 @@ body{
 .form {
   position: relative;
   z-index: 1;
-  background: #14162C;
+  background: #14162c9f;
+  backdrop-filter: blur(5px);
   max-width: 400px;
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
+
 }
 
 .form input {
@@ -74,4 +74,15 @@ body{
 }
 .errorLogin{
   color: #fff;
+}
+
+#logins{
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* right: 10%;
+  top: 10%; */
 }
