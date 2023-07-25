@@ -46,7 +46,7 @@
                   <input 
                     name="nombre_usuario"
                     type="text" 
-                    placeholder="Nomobre de usuario *" 
+                    placeholder="Nombre de usuario *" 
                     required
                   />
                   <input 
