@@ -14,10 +14,11 @@ if (isset($_SESSION['user'])) {
 
     $userId = $user->getId($userSession->getCurrentUser());
     if( $user->esAdmin( $userId ) && isset( $_POST["eventoAprobar"] ) ){
-
-        $eventoIdAprobarPost = $_POST["eventoAprobar"];
-        $user->adminAprobarEvento( $eventoIdAprobarPost );
-        echo $eventoIdAprobarPost;
+        if( $_POST["eventoAprobar"]  ){
+            $eventoIdAprobarPost = $_POST["eventoAprobar"];
+            $user->adminAprobarEvento( $eventoIdAprobarPost );
+            echo "<script> alert( 'Evento aprobado' ) </script>";
+        }
     }
     // echo $userId;
 

@@ -12,8 +12,8 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <!-- Header -->
-   
+
+    <!-- Header -->   
     <header>
         <div>
             <nav>
@@ -46,15 +46,28 @@
                 <h4>
                     <?php echo $descriptionEvento ?>
                 </h4>
-                <?php echo $ubiEvento; ?>
             </div>
 
         </div>
         <img src=<?php echo "./src/imgEventos/" . $imagenMain?>>
 
 
+
+
     </div>    
 
+
+    <div class="areaMap">
+        <div class="iframePadre">
+            <?php echo $ubiEvento ?>
+        </div>
+
+        <div class="infoUbi">
+            <h3><b>DATOS DEL EVENTO</b></h3>
+            <h5><?php echo $nombreEventoActual ?></h5>
+        </div>
+
+    </div>
 
 </body>
 </html>

@@ -17,7 +17,7 @@ if (isset($_POST['nombreEvento']) && isset($_POST['horaEvento']) && isset($_POST
     $directionEvento = $_POST['directionEvento'];
     
     //Mover las cuatro imagenes
-    echo $idUser;
+    // echo $idUser;
 
     $carpetaDestinoPath = './src/imgEventos/';
 
@@ -48,10 +48,10 @@ if (isset($_POST['nombreEvento']) && isset($_POST['horaEvento']) && isset($_POST
 
     $usuarioElements->createEvento($idUser, $nombreEvento, $horaEvento, $descriptionEvento, $ubiEvento, $directionEvento, $nuevoImagenMainNombre, $nuevoImagen2, $nuevoImagen3, $nuevoImagen4);
 
-    echo 'Evento registrado';
 
-    include_once 'view/eventosUser.php';
-    header('Location: dashboardUser.php');
+    include_once 'view/registrado.php';
+    // include_once 'view/eventosUser.php';
+    // header('Location: dashboardUser.php');
 
 } else {
     echo 'No hay data';

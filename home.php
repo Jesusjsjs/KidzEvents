@@ -18,7 +18,6 @@
                 <ul>
                     <li>Inicio</li>
                     <li><a href="dashboardUser.php">Crear</a></li>
-                    <li>Favoritos</li>
                 </ul>
             </nav>
 
@@ -54,7 +53,6 @@
             <img src="./src/img/kidHeroBg.jpg" class="imagenHeroRight"  >
             <img src="./src/img/girlHeroBg.jpg"  class="imagenHeroRight" >
         </div>
-
     </div>
     <!-- Final del hero -->
 
@@ -76,10 +74,8 @@
                     ?>
                     <img src=<?php echo $pathImagen ?>>
                     <div class="cardEventoInfo" >
-   
                         <h3><?php echo $r->nombreEvento ?></h3>
                         <h4><?php echo $r->descriptionEvento ?></h4>
-                        <h5><?php echo $r->horaEvento ?></h5>
                         <a href=<?php echo "evento.php?idEvento=". $r->idEvento ?> ><button > Ver evento </button></a>
                     </div>
                 </div>

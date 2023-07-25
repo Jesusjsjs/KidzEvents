@@ -68,3 +68,18 @@ button{
     object-fit: cover;
     border-radius: 12px;
 }
+.areaMap{
+    width: 1400px;
+    display: grid;
+    margin: auto;
+    grid-template-columns: 2fr 1fr;
+    padding: 20px;
+}
+.iframePadre iframe{
+    width: 100%;
+}
+.infoUbi{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
