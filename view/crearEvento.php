@@ -105,7 +105,7 @@
                     <label>Fecha</label>
                     <input name="horaEvento" type="date">
                     <label>Descripción del evento</label>
-                    <input name="descriptionEvento" type="text">
+                    <textarea name="descriptionEvento" type="text"></textarea>
                     <label>Opcionalmente puedes pegar un mapa</label>
                     <input name="ubiEvento" type="text">
                     <label>Dirección del evento</label>

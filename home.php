@@ -41,8 +41,7 @@
                 <img class="imgInfoHero" alt="logo-kidz-events" src="./src/img/logoHero.png">
                 <h2>Busca, crea e inscribete a <b>eventos escolares </b></h2>
                 <div>
-                    <button class="buttonBlue">Ver eventos</button> 
-                    <button class="buttonPink">Inscribirse</button>
+                    <a href="#eventos" class="buttonBlue">Ver eventos</a>         
                 </div>
             </div>
 
@@ -58,7 +57,7 @@
 
 
     <!-- Eventos info -->
-    <div class="infoProximosEventos">
+    <div id="eventos" class="infoProximosEventos">
         <h2><b>Proximos eventos</b></h2>
     </div>
 

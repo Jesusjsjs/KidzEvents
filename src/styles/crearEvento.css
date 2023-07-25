@@ -123,3 +123,11 @@ header a:hover{
 .cardEvento button:hover{
     color: gray;
 }
+textarea{
+    height: 90px;
+    background-color: #2a2e4a;
+    border: none;
+    text-decoration: none;
+    text-decoration-style: none;
+    margin-bottom: 4px;
+}

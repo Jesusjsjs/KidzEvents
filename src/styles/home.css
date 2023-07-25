@@ -43,6 +43,9 @@ button{
 .buttonBlue, .buttonPink{
     padding: 15px;
     border: none;
+    width: 220px;
+    text-align: center;
+    text-decoration: none;
 
 }
 .buttonBlue{

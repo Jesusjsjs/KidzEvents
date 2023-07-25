@@ -20,8 +20,8 @@
                 <img class="imgInfoHero" alt="logo-kidz-events" src="./src/img/logoHero.png">
                 <h2>Busca, crea e inscribete a <b>eventos escolares </b></h2>
                 <div>
-                    <button class="buttonBlue">Ver eventos</button> 
-                    <button class="buttonPink">Inscribirse</button>
+                    <a href="#eventos" class="buttonBlue">Ver eventos</a>      
+                    
                 </div>
             </div>
 
@@ -72,7 +72,7 @@
                       name="correo" 
                       class="inputLogin" 
                       type="text" 
-                      placeholder="Nombre de usuario" 
+                      placeholder="Correo electronico" 
                       required 
                   />
                   <input 
@@ -104,7 +104,7 @@
 
 
 
-  <div class="infoProximosEventos">
+  <div id="eventos" class="infoProximosEventos">
         <h2><b>Eventos</b></h2>
     </div>
 
