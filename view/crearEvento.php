@@ -21,7 +21,7 @@
             <img src="./src/img/logoColors.png" />
             <ul>
                 <li id="aprobarEventoAbrir">Aprobar evento</li>
-                <li id="historialEventoAbrir">Historial eventos</li>
+                <li id="historialEventoAbrir">Eventos aprobados</li>
             </ul>
         </div>
     <?php } else { ?>
@@ -40,10 +40,10 @@
     <div class="vistasDashBoard">
         <?php if( $user->esAdmin( $userId ) ) {  ?>
             <!-- Si es admin -->
-            <h2 class="textCards">EVENTOS POR APROBAR</h2>
-            <div id="eventosVentana" class="containerCards">
+            <h2 class="textCards">PANEL ADMIN</h2>
+            <div id="eventosPorAprobarAdmin" class="containerCards">
                 
-                <?php foreach ($eventos->pedirEventosToDB() as $j): ?>
+                <?php foreach ($eventos->pedirEventosNoAprobados() as $j): ?>
                     <div class="cardEvento">
                     <?php
                     
@@ -93,6 +93,62 @@
                 </div>
                 <?php endforeach; ?>
             </div>
+
+            <div style="display: none;" id="eventosAprobados" class="containerCards">
+                
+                <?php foreach ($eventos->pedirEventosAprobados() as $j): ?>
+                    <div class="cardEvento">
+                    <?php
+                    
+                    $pathImagen1 = './src/imgEventos/' . $j->imagenMain;
+                    $nombreImagen2 = './src/imgEventos/' . $j->imagen2;
+                    $nombreImagen3 = './src/imgEventos/' . $j->imagen3;
+                    $nombreImagen4 = './src/imgEventos/' . $j->imagen4;
+
+
+                    // $pathImagen2 = './src/imgEventos/' . $nombreMainImg;
+                    // $pathImagen3 = './src/imgEventos/' . $nombreMainImg;
+                    // $pathImagen4 = './src/imgEventos/' . $nombreMainImg;
+                ?>
+                    <img src=<?php echo $pathImagen1 ?>>
+                    <img src=<?php echo $nombreImagen2 ?>>
+                    <img src=<?php echo $nombreImagen3 ?>>
+                    <img src=<?php echo $nombreImagen4 ?>>
+
+                    <div class="cardEventoInfo">
+                        <h3>
+                            <?php $j->nombreEvento ?>
+                        </h3>
+                        <h4>
+                            <?php echo $j->descriptionEvento ?>
+                        </h4>
+                        <h5>
+                            <?php echo $j->horaEvento ?>
+                        </h5>
+                        <h3>Todos los eventos por aprobar</h3>
+
+                        <span>
+                            <?php 
+                                if( $j->estatus ){
+                                    echo "Evento aprobado";
+                                } else{
+                                    echo "Evento no aprobado";
+                                }
+                            ?>
+                        </span>
+                    </div>
+                    
+                    <form action="" method="POST">
+                        <input name="eventoAprobar" style="display:none" value=<?php echo $j->idEvento ?> >
+                        <button type="submit">Aprobar evento</button>
+                    </form>
+                        
+                </div>
+                <?php endforeach; ?>
+            </div>
+
+            <script src="./src/js/changeWindowAdmin.js"></script>
+
 
         <?php } else {  ?>
             <!-- Usuario normal -->
@@ -159,11 +215,12 @@
                 <?php endforeach; ?>
             </div>
 
-            <script src="./src/js/changeWindow.js"></script>
 
         <?php } ?>
 
     </div>
+
+
 
 
 </body>

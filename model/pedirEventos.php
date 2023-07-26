@@ -17,10 +17,15 @@ class pedirEventos extends Database{
 
     public function pedirEventosAprobados(){
         $result = array();
-
         $stm = $this->StartUp()->prepare("SELECT * FROM eventos WHERE estatus = 1");
         $stm->execute();
+        return $stm->fetchAll(PDO::FETCH_OBJ);
+    }
 
+    public function pedirEventosNoAprobados(){
+        $result = array();
+        $stm = $this->StartUp()->prepare("SELECT * FROM eventos WHERE estatus = 0");
+        $stm->execute();
         return $stm->fetchAll(PDO::FETCH_OBJ);
     }
 

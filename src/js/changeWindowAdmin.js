@@ -1,14 +1,14 @@
 document.addEventListener( "DOMContentLoaded", ()=>{
 
+
     let buttonsAbrir =[
-        "crearEventoAbrir",
-        "aprobadosEventoAbrir",
-        "aprobarEventoAbrir"
+        "aprobarEventoAbrir",
+        "historialEventoAbrir"
 
     ]
     let ventanasAbrir =[
-        "crearEventoVentana",
-        "eventosVentana"
+        "eventosPorAprobarAdmin",
+        "eventosAprobados"
     ]
 
 
