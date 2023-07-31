@@ -28,10 +28,14 @@
                 <ul>
                     <!-- <li class="signIn">Sign In</li>
                     <li class="logIn">Log In</li> -->
-                    <?php
+                    <?php if( $user->getcorreo() ) { 
                         echo $user->getcorreo();
                     ?>
-                    <a href="model/logout.php">Cerrar sesion </a>
+                        <a href="model/logout.php">Cerrar sesion </a>
+                    <?php } else{  ?>
+                        <a href="index.php">Home</a>
+                    <?php } ?>
+
                 </ul>
             </div>
         </div>
@@ -49,7 +53,7 @@
             </div>
 
         </div>
-        <img src=<?php echo "./src/imgEventos/" . $imagenMain?>>
+        <img src=<?php echo "./src/imgEventos/." . $imagenMain?>>
 
 
 

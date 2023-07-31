@@ -100,10 +100,10 @@
                     <div class="cardEvento">
                     <?php
                     
-                    $pathImagen1 = './src/imgEventos/' . $j->imagenMain;
-                    $nombreImagen2 = './src/imgEventos/' . $j->imagen2;
-                    $nombreImagen3 = './src/imgEventos/' . $j->imagen3;
-                    $nombreImagen4 = './src/imgEventos/' . $j->imagen4;
+                    $pathImagen1 = './src/imgEventos/.' . $j->imagenMain;
+                    $nombreImagen2 = './src/imgEventos/.' . $j->imagen2;
+                    $nombreImagen3 = './src/imgEventos/.' . $j->imagen3;
+                    $nombreImagen4 = './src/imgEventos/.' . $j->imagen4;
 
 
                     // $pathImagen2 = './src/imgEventos/' . $nombreMainImg;
@@ -187,7 +187,7 @@
                     <div class="cardEvento">
                         <?php
                             $nombreMainImg = $r->imagenMain;
-                            $pathImagen = './src/imgEventos/' . $nombreMainImg;
+                            $pathImagen = './src/imgEventos/.' . $nombreMainImg;
                         ?>
                         <img src=<?php echo $pathImagen ?>>
                         <div class="cardEventoInfo">

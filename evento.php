@@ -1,22 +1,14 @@
 <?php
 include_once "./model/user.php";
-$user = new User();
+include_once "./model/user_session.php";
 
+$user = new User();
+$session = new UserSession();
 
 
 $idEvento = $_GET["idEvento"];
 $dataEvento = $user->pedirEventoPorId( $idEvento );
 
-
-// $nombreEventoActual;
-// $horaEvento;
-// $descriptionEvento;
-// $ubiEvento;
-// $directionEvento; 
-// $imagenMain; 
-// $imagen2;
-// $imagen3;
-// $imagen4;
 
 
 foreach ($dataEvento as $key) {
